@@ -25,7 +25,7 @@ fi
 
 diff $CURR $LAST | grep \< | sed -e s/^\<' '//g | grep '.avi\|.mp4\|.rm' > $DIFF
 
-#mv $CURR $LAST
+mv $CURR $LAST
 
 if [ -s $DIFF ] ; then
 	mail="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">
