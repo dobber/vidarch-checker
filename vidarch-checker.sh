@@ -6,7 +6,7 @@ CURR="$workdir/curr"
 DIFF="$workdir/diff"
 
 from="From: root@${HOSTNAME}"
-email="zlobber@gmail.com"
+email="your@email.com"
 subject="New videos in maniax's lecture archive"
 
 template="Here is a list of all the new videos in maniax's video archive. Enjoy your free time!"
