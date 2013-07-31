@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mailer="/usr/bin/mail"
 workdir="/var/lib/vidarch-checker/"
 LAST="$workdir/last"
 CURR="$workdir/curr"
@@ -39,5 +40,6 @@ ${template}<br>
 	done < $DIFF
 
 	mail="$mail</p></body></html>"
-	echo "${mail}" | mail -a ${from} -a "MIME-Version: 1.0" -a "Content-Type: text/html" -s "${subject}" "${email}"
+	echo "${mail}" | ${mailer} -a ${from} -a "MIME-Version: 1.0" -a "Content-Type: text/html" -s "${subject}" "${email}"
 fi
+
