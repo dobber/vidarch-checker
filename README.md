@@ -1,7 +1,9 @@
 vidarch-checker
 =========
 
-A simple script to check maniax's video lecture storage
+A simple script to check maniax's video lecture storage.
+
+The script is going to check the storage once a week and will email if there is new videos found
 
 Install
 ==
