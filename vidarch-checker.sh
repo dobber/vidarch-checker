@@ -24,7 +24,7 @@ if [ ! -f $LAST ] ; then
 	exit 0
 fi
 
-diff $CURR $LAST | grep \< | sed -e s/^\<' '//g | grep '.avi\|.mp4\|.rm' > $DIFF
+diff $CURR $LAST | grep \< | sed -e s/^\<' '//g | grep '.avi\|.mp4\|.rm\|.mov' > $DIFF
 
 mv $CURR $LAST
 
@@ -40,6 +40,5 @@ ${template}<br>
 	done < $DIFF
 
 	mail="$mail</p></body></html>"
-	echo "${mail}" | ${mailer} -a ${from} -a "MIME-Version: 1.0" -a "Content-Type: text/html" -s "${subject}" "${email}"
+	echo "${mail}" | ${mailer} -a "${from}" -a "MIME-Version: 1.0" -a "Content-Type: text/html" -s "${subject}" "${email}"
 fi
-
