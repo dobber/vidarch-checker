@@ -40,5 +40,5 @@ ${template}<br>
 	done < $DIFF
 
 	mail="$mail</p></body></html>"
-	echo "${mail}" | ${mailer} -a "${from}" -a "MIME-Version: 1.0" -a "Content-Type: text/html" -s "${subject}" "${email}"
+	echo "${mail}" | ${mailer} -a "${from}" -a "MIME-Version: 1.0" -a "Content-Type: text/html;charset=utf-8" -s "${subject}" "${email}"
 fi
